@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class ProducController extends Controllers
+class ProductController extends Controller
 {
     public function index()
     {
@@ -12,12 +12,17 @@ class ProducController extends Controllers
         return view('products.index', compact('products'));
     }
 
+    public function create()
+    {
+        return view('products.create');
+    }
+
     public function store(Request $request)
     {
         $request->validate([
-            'name'  => 'required',
+            'name' => 'required',
             'price' => 'required|numeric',
-            'stoct' => 'required|integer',
+            'stock' => 'required|integer',
         ]);
 
         Product::create($request->all());
@@ -33,15 +38,15 @@ class ProducController extends Controllers
 
     public function edit(Product $product)
     {
-        return view('product.edit', compact('product'));
+        return view('products.edit', compact('product'));
     }
 
     public function update(Request $request, Product $product)
     {
         $request->validate([
-            'name'  => 'required',
+            'name' => 'required',
             'price' => 'required|numeric',
-            'stoct' => 'required|integer',
+            'stock' => 'required|integer',
         ]);
 
         $product->update($request->all());
@@ -54,8 +59,6 @@ class ProducController extends Controllers
     {
         $product->delete();
         return redirect()->route('products.index')
-                         ->with('success','Product deleted successfully,');
+                         ->with('success', 'Product deleted successfully.');
     }
-
-
 }

@@ -8,4 +8,4 @@ Route::get('/', function () {
 
 use App\Http\Controllers\ProductController;
 
-Route::resource('products', ProducController::class);
+Route::resource('products', ProductController::class);
