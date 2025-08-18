@@ -28,3 +28,20 @@ Route::get('/hello1/{name}', function ($name){
 Route::get('/post/{id}/{name}', function($id,$name){
     return "This post ID is :".$id. " and post Name is :".$name;
 })->where(['id'=>'[0-9]+', 'name' => '[a-zA-Z]+']);
+
+//Group route
+Route::group([], function(){
+
+    Route::get('/first', function(){
+        echo "First Route";
+    });
+
+    Route::get('/second', function(){
+        echo "Second Route";
+    });
+
+    Route::get('/third', function(){
+        echo "Third Route";
+    });
+
+});
