@@ -57,7 +57,7 @@ Route::group(['prefix' => 'Prefix'], function(){
     Route::get('/laravel', function(){
         echo 'Laravel Trainig';
     });
-    Route::get('/c#', function(){
+    Route::get('/cSharp', function(){
         echo 'C# Trainig';
     });
     Route::get('/react', function(){
