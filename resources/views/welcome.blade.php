@@ -50,16 +50,17 @@
                                 <a class="dropdown-item" href="{{ route('products.index') }}" target="_blank">
                                     Products
                                 </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ route('contact.page') }}" target="_blank">
-                                    Contact Us
-                                </a>
-                            </li>
+                            </li>                  
                             <li>
                                 <a class="dropdown-item" href="{{ url('with') }}" target="_blank">With</a>
                             </li>
                         </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link " href="{{ route('contact.page') }}"  
+                           role="button">
+                            Contact Us
+                        </a>
                     </li>
                 </ul>
             </div>

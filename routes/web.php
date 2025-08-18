@@ -70,6 +70,11 @@ Route::group(['prefix' => 'Prefix'], function(){
 //Controller Route
 Route::get('/contact', [PageController::class, 'contact'])->name('contact.page');
 
+//Without Controller
+// Route::get('/contact', function () {
+//     return view('contact');
+// })->name('contact.page');
+
 
 // Data passing to view
 // Route::get('/article', function(){
