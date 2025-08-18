@@ -69,3 +69,15 @@ Route::group(['prefix' => 'Prefix'], function(){
 
 //Controller Route
 Route::get('/contact', [PageController::class, 'contact'])->name('contact.page');
+
+
+// Data passing to view
+// Route::get('/article', function(){
+//     return view ('testview',['articleName'=>['Article 1','Article 2','Article 3','Article 4',]]);
+// });
+
+Route::get('/with', function(){
+    $withView = "With View";
+
+    return view('testview')->with('withView', $withView);
+});
