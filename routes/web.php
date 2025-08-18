@@ -1,12 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PageController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-use App\Http\Controllers\ProductController;
 
 Route::resource('products', ProductController::class);
 
@@ -67,4 +67,5 @@ Route::group(['prefix' => 'Prefix'], function(){
 });
 
 
-//
+//Controller Route
+Route::get('/contact', [PageController::class, 'contact'])->name('contact.page');
