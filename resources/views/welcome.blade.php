@@ -56,6 +56,9 @@
                                     Contact Us
                                 </a>
                             </li>
+                            <li>
+                                <a class="dropdown-item" href="{{ url('with') }}" target="_blank">With</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
