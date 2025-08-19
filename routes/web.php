@@ -86,3 +86,12 @@ Route::get('/with', function(){
 
     return view('testview')->with('withView', $withView);
 });
+
+Route::get('/compact', function(){
+    $compactView = ["Compact View","Compact View 1"];
+    $compactView2 = "Compact View 2";
+
+    return view('testview')->with(compact('compactView', 'compactView2'));
+});
+    
+Route::get('/myarticle',[PageController::class, 'myArticle']);

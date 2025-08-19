@@ -27,9 +27,17 @@
                 <li>{{ $article }}</li>
             @endforeach
         </ul> --> --}}
-        <ul>
+        {{--<!-- <ul>
             <li>{{ $withView }}</li>
+        </ul> -->--}}
+
+        <ul>
+            @foreach($compactView as $view)
+                <li>{{ $view }}</li>
+            @endforeach
         </ul>
+
+        <p>{{ $compactView2 }}</p>
     </div>
     
 </body>
