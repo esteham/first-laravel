@@ -27,8 +27,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="nav-link " href="{{ route('contact.page') }}"  
-                       role="button">
+                    <a class="nav-link " href="{{ route('contact.page') }}" role="button">
                         Contact Us
                     </a>
                 </li>

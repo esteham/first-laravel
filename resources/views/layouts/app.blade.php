@@ -18,8 +18,7 @@
             background: #f8f9fa;
         }
         .hero {
-            min-height: 80vh;
-            display: flex;
+            min-height: 75vh;
             align-items: center;
             justify-content: center;
             text-align: center;
@@ -32,7 +31,7 @@
     @include('partials.header')
 
     {{-- Main Content --}}
-    <main>
+    <main class="container mt-5 hero">
         @yield('content')
     </main>
 
