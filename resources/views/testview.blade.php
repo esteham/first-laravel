@@ -39,7 +39,8 @@
 
         <p>{{ $compactView2 }}</p> -->--}}
 
-        <p>{{ $myarticle }}</p>
+        {{--<!-- <p>{{ $myarticle }}</p> -->--}}
+         <p>"Welcome to Profile Page! Your age is: {{ $age }}</p>
     </div>
     
 </body>

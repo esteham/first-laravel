@@ -97,7 +97,7 @@ Route::get('/compact', function(){
 Route::get('/myarticle',[PageController::class, 'article']);
 
 Route::get('/profile/{age}', function ($age) {
-    return "Welcome to Profile Page! Your age is: " . $age;
+    return view('testview', ['age' => $age]);
 })->middleware('checkAge');
 
 Route::get('/no-access', function () {
