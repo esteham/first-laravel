@@ -95,3 +95,11 @@ Route::get('/compact', function(){
 });
 
 Route::get('/myarticle',[PageController::class, 'article']);
+
+Route::get('/profile/{age}', function ($age) {
+    return "Welcome to Profile Page! Your age is: " . $age;
+})->middleware('checkAge');
+
+Route::get('/no-access', function () {
+    return "You do not have access to this page.";
+});
