@@ -1,26 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <title>Laravel 12 CRUD</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@yield('title', 'Laravel')</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: 'Instrument Sans', sans-serif;
+            background: #f8f9fa;
+        }
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<div class="d-flex">
-    <!-- Sidebar -->
-    <div class="bg-dark text-white p-3" style="width: 220px; height: 100vh;">
-        <h4>Menu</h4>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a href="{{ route('products.index') }}" class="nav-link text-white">Products</a>
-            </li>
-            <!-- Future menu items -->
-        </ul>
-    </div>
+    
+    {{-- Header Include --}}
+    @include('partials.header')
 
-    <!-- Main content -->
-    <div class="p-4" style="flex: 1;">
+    {{-- Main Content --}}
+    <main>
         @yield('content')
-    </div>
-</div>
+    </main>
+
+    {{-- Footer Include --}}
+    @include('partials.footer')
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
