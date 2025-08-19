@@ -103,3 +103,5 @@ Route::get('/profile/{age}', function ($age) {
 Route::get('/no-access', function () {
     return "You do not have access to this page.";
 });
+
+Route::get('/admin-dashboard', [PageController::class, 'display']);
