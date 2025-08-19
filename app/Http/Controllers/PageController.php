@@ -10,4 +10,9 @@ class PageController extends Controller
     {
         return view('contact');
     }
+
+    public function article()
+    {
+        return view('testview',['myarticle'=>'passing article to view']);
+    }
 }

@@ -31,13 +31,15 @@
             <li>{{ $withView }}</li>
         </ul> -->--}}
 
-        <ul>
+        {{--<!-- <ul>
             @foreach($compactView as $view)
                 <li>{{ $view }}</li>
             @endforeach
         </ul>
 
-        <p>{{ $compactView2 }}</p>
+        <p>{{ $compactView2 }}</p> -->--}}
+
+        <p>{{ $myarticle }}</p>
     </div>
     
 </body>

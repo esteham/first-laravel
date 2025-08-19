@@ -93,5 +93,5 @@ Route::get('/compact', function(){
 
     return view('testview')->with(compact('compactView', 'compactView2'));
 });
-    
-Route::get('/myarticle',[PageController::class, 'myArticle']);
+
+Route::get('/myarticle',[PageController::class, 'article']);
