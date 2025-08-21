@@ -2,6 +2,8 @@
 @vite('resources/css/app.css')
 @vite('resources/js/app.js')
 
+@section('title', 'Contact Us')
+
 @section('content')
 
     <div class="max-w-4xl mx-auto py-12 px-6">

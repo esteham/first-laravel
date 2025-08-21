@@ -8,8 +8,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::resource('products', ProductController::class);
 
+Route::get('/contact', [PageController::class, 'contact'])->name('contact.page');
+
+Route::get('/about',function () {
+    return view('about');
+});
 
 //2nd class Route test
 Route::get('/hello', function (){
@@ -68,7 +74,7 @@ Route::group(['prefix' => 'Prefix'], function(){
 
 
 //Controller Route
-Route::get('/contact', [PageController::class, 'contact'])->name('contact.page');
+
 
 //Without Controller
 // Route::get('/contact', function () {
