@@ -17,6 +17,14 @@ Route::get('/about',function () {
     return view('about');
 });
 
+Route::get('/',function () {
+    return view('pages.home');
+});
+
+Route::get('/myabout',function () {
+    return view('pages.about');
+});
+
 //2nd class Route test
 Route::get('/hello', function (){
     return "Hello spider";
