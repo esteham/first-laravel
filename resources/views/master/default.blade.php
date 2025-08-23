@@ -6,10 +6,10 @@
     <title>@yield('title')</title>
 
     <style>
-        div.container{
-            width: 600px;
+        /* div.container{
+            width: 1200px;
             margin: 0 auto;
-        }
+        } */
         ul{
             list-style-type: none;
             margin: 0;
@@ -47,11 +47,11 @@
             height: 300px;
         }
         .contents{
-            margin-left: 170px;
+            /* margin-left: 170px; */
             border-left: 1px solid gray;
             padding: 1em;
             overflow: hidden;
-            height: 300px;
+            /* height: 300px; */
         }
     </style>
 </head>

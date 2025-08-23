@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\CustomerController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -119,3 +120,6 @@ Route::get('/no-access', function () {
 });
 
 Route::get('/admin-dashboard', [PageController::class, 'display']);
+
+Route::get('/customer', [CustomerController::class, 'showForm']);
+Route::post('/customer', [CustomerController::class, 'store']);
