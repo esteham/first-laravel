@@ -1,0 +1,21 @@
+/* Full page center align */
+body {
+    min-height: 100vh;
+    background: #f8f9fa; 
+    margin: 0;
+}
+
+/* Wrapper styling */
+.form-wrapper {
+    margin: auto;
+    width: 600px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Input width */
+.form-control {
+    width: 300px;
+}
