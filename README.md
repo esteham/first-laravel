@@ -1,13 +1,11 @@
 <p align="center"><a href="https://xetroot.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
-<a href="https://github.com/esteham"><img src="https://github.com/laravel/framework/workflows/xetroot/badge.svg" alt="Build Status"></a>
+<a href="https://github.com/esteham"><img alt="Static Badge" src="https://img.shields.io/badge/esteham-blue?style=plastic&logo=github&logoColor=black">
 
-## About 
+## About
 
-
-
-## Learning 
+## Learning
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
@@ -15,16 +13,11 @@ You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-
 ## Contributing
-
-
 
 ## Code of Conduct
 
-
 ## Security Vulnerabilities
-
 
 ## License
 
