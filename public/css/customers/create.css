@@ -1,0 +1,18 @@
+/* public/css/custom.css */
+.create{
+    width: 600px;
+}
+
+form {
+    background-color: #f8f9fa; 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form input, form textarea {
+    border: 2px solid #007bff; 
+}
+
+form button {
+    letter-spacing: 1px;
+}

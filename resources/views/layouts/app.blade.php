@@ -7,7 +7,8 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" />
 
-        @yield('head')
+        <!--Custome css-->
+        <link rel="stylesheet" href="{{ asset('css/customers/create.css') }}">
     </head>
 <body>
 

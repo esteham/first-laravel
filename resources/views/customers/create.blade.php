@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-4">
+<div class="container mt-4 create">
     <h1 class="mb-4">Add Customer</h1>
 
     <form action="{{ route('customers.store') }}" method="POST" enctype="multipart/form-data">
