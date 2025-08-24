@@ -1,4 +1,4 @@
-<p align="center"><a href="https://xetroot.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://xetroot.com" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/esteham-blue?style=flat-square&logo=github&logoColor=black" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/esteham"><img alt="Static Badge" src="https://img.shields.io/badge/esteham-blue?style=plastic&logo=github&logoColor=black">
