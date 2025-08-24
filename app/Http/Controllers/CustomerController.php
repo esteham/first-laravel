@@ -73,10 +73,11 @@ class CustomerController extends Controller
         }
 
         if($request->hasFile('photo')){
-            if($customer->photo && File::exists(public_path($customer->photo))){
-                File::delete(public_path($customer->photo));
-            }
+            // if($customer->photo && File::exists(public_path($customer->photo))){
+            //     File::delete(public_path($customer->photo));
+            // }
             $file = $request->file('photo');
+            @unlink(public_path($customer->photo));
             $filename = 'customer_'.date('YmHi').uniqid().'.'.$file->getClientOriginalExtension();
             $file->move($uploadPath, $filename);
             $data['photo'] = 'uploads/images/customers/'.$filename;
