@@ -26,6 +26,15 @@
         </li>
     </ul>
 </nav>
+<nav class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center">
+        <div class="text-lg font-bold">
+            <a href="{{ route('customer.index') }}">CustomerApp</a>
+        </div>
+        <div class="space-x-4">
+            <a href="{{ route('customer.index') }}" class="hover:underline">Home</a>
+            <a href="{{ route('customer.create') }}" class="hover:underline">Add Customer</a>
+        </div>
+</nav>
 
 <div class="container mt-4">
     @yield('content')

@@ -121,5 +121,12 @@ Route::get('/no-access', function () {
 
 Route::get('/admin-dashboard', [PageController::class, 'display']);
 
-Route::get('/customer', [CustomerController::class, 'showForm']);
-Route::post('/customer', [CustomerController::class, 'store']);
+// Route::get('/customer', [CustomerController::class, 'showForm']);
+// Route::post('/customer', [CustomerController::class, 'store']);
+
+Route::get('/customer', function () {
+    return redirect()->route('customer.index');
+});
+
+// Customer CRUD routes
+Route::resource('customer', CustomerController::class);
