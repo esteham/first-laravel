@@ -43,7 +43,7 @@ class CustomerController extends Controller
         }
 
         Customer::create($data);
-        return redirect()->route('customer.index')->with('success','Customer created successfully');
+        return redirect()->route('customers.index')->with('success','Customer created successfully');
     }
 
     public function show(Customer $customer)
@@ -84,7 +84,7 @@ class CustomerController extends Controller
         }
 
         $customer->update($data);
-        return redirect()->route('customer.index')->with('success','Customer updated successfully');
+        return redirect()->route('customers.index')->with('success','Customer updated successfully');
     }
 
     public function destroy(Customer $customer)
@@ -93,6 +93,6 @@ class CustomerController extends Controller
             File::delete(public_path($customer->photo));
         }
         $customer->delete();
-        return redirect()->route('customer.index')->with('success','Customer deleted successfully');
+        return redirect()->route('customers.index')->with('success','Customer deleted successfully');
     }
 }

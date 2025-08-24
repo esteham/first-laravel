@@ -11,4 +11,4 @@ Route::get('/', function () {
 });
 
 // Customer CRUD routes
-Route::resource('customer', CustomerController::class);
+Route::resource('customers', CustomerController::class);

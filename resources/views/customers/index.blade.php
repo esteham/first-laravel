@@ -4,7 +4,7 @@
 <div class="container mx-auto py-6">
     <h1 class="text-2xl font-bold mb-4">Customers</h1>
 
-    <a href="{{ route('customer.create') }}" class="bg-blue-600 text-white px-4 py-2 rounded">Add Customer</a>
+    <a href="{{ route('customers.create') }}" class="bg-blue-600 text-white px-4 py-2 rounded">Add Customer</a>
 
     @if(session('success'))
         <div class="bg-green-200 text-green-800 p-2 rounded mt-3">
@@ -36,9 +36,9 @@
                     <td class="p-2 border">{{ $cust->email }}</td>
                     <td class="p-2 border">{{ $cust->phone }}</td>
                     <td class="p-2 border space-x-2">
-                        <a href="{{ route('customer.show',$cust->id) }}" class="text-blue-600">View</a>
-                        <a href="{{ route('customer.edit',$cust->id) }}" class="text-yellow-600">Edit</a>
-                        <form action="{{ route('customer.destroy',$cust->id) }}" method="POST" class="inline">
+                        <a href="{{ route('customers.show',$cust->id) }}" class="text-blue-600">View</a>
+                        <a href="{{ route('customers.edit',$cust->id) }}" class="text-yellow-600">Edit</a>
+                        <form action="{{ route('customers.destroy',$cust->id) }}" method="POST" class="inline">
                             @csrf
                             @method('DELETE')
                             <button class="text-red-600" onclick="return confirm('Delete this customer?')">Delete</button>

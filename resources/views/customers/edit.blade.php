@@ -3,7 +3,7 @@
 @section('content')
 <h1 class="text-2xl font-bold mb-4">Edit Customer</h1>
 
-<form action="{{ route('customer.update', $customer->id) }}" method="POST" enctype="multipart/form-data" class="space-y-4">
+<form action="{{ route('customers.update', $customer->id) }}" method="POST" enctype="multipart/form-data" class="space-y-4">
     @csrf
     @method('PUT')
     <div>
@@ -34,6 +34,6 @@
         <textarea name="bio" rows="4" class="w-full border rounded p-2">{{ old('bio', $customer->bio) }}</textarea>
     </div>
     <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Update</button>
-    <a href="{{ route('customer.index') }}" class="ml-2 text-gray-600">Cancel</a>
+    <a href="{{ route('customers.index') }}" class="ml-2 text-gray-600">Cancel</a>
 </form>
 @endsection

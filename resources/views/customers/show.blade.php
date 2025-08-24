@@ -12,7 +12,7 @@
 <p><strong>Bio:</strong> {{ $customer->bio ?? 'N/A' }}</p>
 
 <div class="mt-4">
-    <a href="{{ route('customer.edit',$customer->id) }}" class="bg-yellow-500 text-white px-4 py-2 rounded">Edit</a>
-    <a href="{{ route('customer.index') }}" class="ml-2 text-gray-600">Back</a>
+    <a href="{{ route('customers.edit',$customer->id) }}" class="bg-yellow-500 text-white px-4 py-2 rounded">Edit</a>
+    <a href="{{ route('customers.index') }}" class="ml-2 text-gray-600">Back</a>
 </div>
 @endsection
