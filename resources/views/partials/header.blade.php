@@ -21,6 +21,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('contact.page') }}" method="POST">Contact Us</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.messages') }}" >Messages</a>
+                </li>
             </ul>
         </div>
     </div>
