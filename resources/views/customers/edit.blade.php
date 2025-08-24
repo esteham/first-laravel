@@ -1,39 +1,57 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="text-2xl font-bold mb-4">Edit Customer</h1>
+<div class="container mt-4">
+    <h1 class="mb-4">Edit Customer</h1>
 
-<form action="{{ route('customers.update', $customer->id) }}" method="POST" enctype="multipart/form-data" class="space-y-4">
-    @csrf
-    @method('PUT')
-    <div>
-        <label class="block">Name</label>
-        <input type="text" name="name" value="{{ old('name', $customer->name) }}" class="w-full border rounded p-2">
-        @error('name') <p class="text-red-600">{{ $message }}</p> @enderror
-    </div>
-    <div>
-        <label class="block">Email</label>
-        <input type="email" name="email" value="{{ old('email', $customer->email) }}" class="w-full border rounded p-2">
-        @error('email') <p class="text-red-600">{{ $message }}</p> @enderror
-    </div>
-    <div>
-        <label class="block">Phone</label>
-        <input type="text" name="phone" value="{{ old('phone', $customer->phone) }}" class="w-full border rounded p-2">
-        @error('phone') <p class="text-red-600">{{ $message }}</p> @enderror
-    </div>
-    <div>
-        <label class="block">Photo</label>
-        @if($customer->photo)
-            <img src="{{ asset($customer->photo) }}" class="w-16 h-16 mb-2 rounded">
-        @endif
-        <input type="file" name="photo" class="w-full border rounded p-2">
-        @error('photo') <p class="text-red-600">{{ $message }}</p> @enderror
-    </div>
-    <div>
-        <label class="block">Bio</label>
-        <textarea name="bio" rows="4" class="w-full border rounded p-2">{{ old('bio', $customer->bio) }}</textarea>
-    </div>
-    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Update</button>
-    <a href="{{ route('customers.index') }}" class="ml-2 text-gray-600">Cancel</a>
-</form>
+    <form action="{{ route('customers.update', $customer->id) }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" id="name" value="{{ old('name', $customer->name) }}" class="form-control @error('name') is-invalid @enderror">
+            @error('name')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" value="{{ old('email', $customer->email) }}" class="form-control @error('email') is-invalid @enderror">
+            @error('email')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" name="phone" id="phone" value="{{ old('phone', $customer->phone) }}" class="form-control @error('phone') is-invalid @enderror">
+            @error('phone')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
+        <div class="mb-3">
+            <label for="photo" class="form-label">Photo</label>
+            @if($customer->photo)
+                <div class="mb-2">
+                    <img src="{{ asset($customer->photo) }}" class="img-thumbnail" style="width: 64px; height: 64px;">
+                </div>
+            @endif
+            <input type="file" name="photo" id="photo" class="form-control @error('photo') is-invalid @enderror">
+            @error('photo')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
+        <div class="mb-3">
+            <label for="bio" class="form-label">Bio</label>
+            <textarea name="bio" id="bio" rows="4" class="form-control">{{ old('bio', $customer->bio) }}</textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a href="{{ route('customers.index') }}" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>
 @endsection
