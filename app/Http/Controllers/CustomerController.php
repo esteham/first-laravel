@@ -26,7 +26,7 @@ class CustomerController extends Controller
             'email' => ['required','email','max:120','unique:customers,email'],
             'phone' => ['nullable','string', 'max:15'],
             'photo' => ['nullable','image','mimes:jpg,jpeg,png,webp','max:2048'],
-            'bio'   => ['nullable','text'],
+            'bio'   => ['nullable'],
         ]);
 
         // Image upload
