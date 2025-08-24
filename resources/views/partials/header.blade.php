@@ -9,30 +9,13 @@
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
-                <!-- Dropdown -->
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" 
-                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        2nd Class
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                        <li>
-                            <a class="dropdown-item" href="{{ route('products.index') }}" target="_blank">
-                                Products
-                            </a>
-                        </li>                  
-                        <li>
-                            <a class="dropdown-item" href="{{ url('with') }}" target="_blank">With</a>
-                        </li>
-                    </ul>
-                </li> -->
                 <li>
-                    <a class="nav-link " href="/about" role="button">
+                    <a class="nav-link " href="#" role="button">
                         About
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link " href="{{ route('contact.page') }}" role="button">
+                    <a class="nav-link " href="#" role="button">
                         Contact Us
                     </a>
                 </li>
