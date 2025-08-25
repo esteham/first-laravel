@@ -7,7 +7,7 @@
     <a href="{{ route('customers.create') }}" class="btn btn-primary mb-3">Add Customer</a>
 
     @if(session('success'))
-        <div class="alert alert-success">
+        <div id="alert-success" class="alert alert-success">
             {{ session('success') }}
         </div>
     @endif
@@ -59,4 +59,7 @@
         {{ $customer->links() }}
     </div>
 </div>
+
+<script src="{{ asset('js/timeout.js') }}"></script>
+
 @endsection

@@ -6,7 +6,7 @@
 
     <h2>This is about page</h2>
     <div class="container">
-        <div class="d-flex">
+        <div class="d-flex justify-content-around">
             <div class="col-6">
                 Xihad Ansari
             </div>
