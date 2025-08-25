@@ -1,3 +1,5 @@
+//Alert-box hide with id = alert-success
+
 setTimeout(function () {
     const alertBox = document.getElementById("alert-success");
     if (alertBox) {
